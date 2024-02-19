@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <title>Калькулятор професій</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
     <div class="container">
+        <img src="./assets/uzhnu_white.png" alt="uzhnu logo">
         <h1>Калькулятор професій</h1>
         <div class="search-bar">
             <div class="select" >
-                <p id="selectText-degree">Бакалавр</p>
+                <p id="selectText-degree">Освітній ступінь</p>
                 <i class="fa-solid fa-caret-down"></i>
                 <ul id="list-degree">
                     <li class="options-degree">Бакалавр</li>
@@ -18,35 +23,53 @@
                 </ul>
             </div>
             <div class="select">
-                <p id="selectText-type">Пошук по спеціальності</p>
+                <p id="selectText-type">Критерії пошуку</p>
                 <i class="fa-solid fa-caret-down"></i>
                 <ul id="list-type">
-                    <li class="options-type">Пошук по спеціальності</li>
-                    <li class="options-type">Пошук по професії</li>
+                    <li class="options-type">За спеціальністю</li>
+                    <li class="options-type">За професією</li>
                 </ul>
             </div>
-            <input type="text" placeholder="Пошук по спеціальності">
+            <button class="options-button">
+                <div class="overlay"></div>
+                Обрати</button>
+           <!-- <div class="select">
+                    <span  >Обрати</span>
+                    <i class="fa-solid fa-caret-down"></i>
+               <div class="wrapper" id="selectText-search">
+
+                <div class="content" id="search-content">
+                    <div class="search">
+                        <i class="uil uil-search"></i>
+                        <input spellcheck="false" type="text" placeholder="Search">
+                    </div>
+                    <ul class="options"></ul>
+                </div>
+               </div>
+            </div>
+-->
+
+        </div>
+        <div id="messageBox">Оберіть варіанти у обох меню</div>
+
+        <!--Search box-->
+        <div class="wrapper">
+            <div class="search-input">
+                <a href="" target="_blank" hidden></a>
+                <input type="text" placeholder="Пошук...">
+                <div class="autocom-box">
+                    <!-- here list are inserted from javascript -->
+                </div>
+                <div class="icon"><i class="fas fa-search"></i></div>
+            </div>
+            <div id="card"></div>
         </div>
     </div>
 
 
 
-<!--    <div class="button-container">-->
-<!--&lt;!&ndash;        <button class="button-item">Бакалавр</button>&ndash;&gt;-->
-<!--&lt;!&ndash;        <button class="button-item">Магістр</button>&ndash;&gt;-->
-<!--        <button class="button-28" role="button">Бакалавр</button>-->
-<!--        <button class="button-28" role="button">Магістр</button>-->
-<!--    </div>-->
-<!--    <div class="search-container">-->
-<!--        <div class="bachelor-search_container">-->
-<!--            bachelor-->
-<!--        </div>-->
-<!--        <div class="master-search_container">-->
-<!--            master-->
-<!--        </div>-->
-<!--    </div>-->
-
     <script  type="module" src="index.js" ></script>
     <script src="https://kit.fontawesome.com/43703886e8.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
